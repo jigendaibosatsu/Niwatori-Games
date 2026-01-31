@@ -4,23 +4,85 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Niwatori Games</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body style="font-family:system-ui; padding:24px;">
-  <h1>Niwatori Games</h1>
-  <p>ブラウザゲームをコツコツ展示するページ。</p>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="site-logo" aria-label="トップ">
+        <span class="site-icon" aria-hidden="true">🐔</span>
+        <span class="site-name">Niwatori Games</span>
+      </a>
+      <button type="button" class="btn-search" aria-label="検索">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+      </button>
+    </div>
+  </header>
 
-<p>
-  <a href="/roadmap.html">▶ 開発ロードマップ</a>
-</p>
-  
-  <h2>Games</h2>
-  <ul>
-    <li><a href="./games/baba-nuki/">ババ抜き（準備中）</a></li>
-  </ul>
+  <nav class="category-tabs" role="tablist" aria-label="カテゴリ">
+    <div class="tabs-scroll">
+      <button type="button" class="tab active" data-tab="top" role="tab" aria-selected="true">トップ</button>
+      <button type="button" class="tab" data-tab="game" role="tab" aria-selected="false">ゲーム</button>
+      <button type="button" class="tab" data-tab="hobby" role="tab" aria-selected="false">趣味</button>
+      <button type="button" class="tab" data-tab="article" role="tab" aria-selected="false">記事</button>
+      <button type="button" class="tab" data-tab="trending" role="tab" aria-selected="false">急上昇</button>
+      <button type="button" class="tab" data-tab="recommended" role="tab" aria-selected="false">おすすめ</button>
+    </div>
+  </nav>
 
-  <h2>Devlog</h2>
-  <ul>
-    <li>2026-01-29: 公開スタート</li>
-  </ul>
+  <main class="layout">
+    <div class="main-content">
+      <!-- 急上昇セクション（枠のみ・後で差し替え可能） -->
+      <section class="section trending-section" id="section-trending" aria-labelledby="heading-trending">
+        <h2 class="section-title" id="heading-trending">急上昇</h2>
+        <div class="trending-list" id="trending-container">
+          <div class="skeleton-list" id="trending-skeleton" aria-hidden="false">
+            <div class="skeleton-item"></div>
+            <div class="skeleton-item"></div>
+            <div class="skeleton-item"></div>
+          </div>
+          <div class="trending-items" id="trending-items" hidden></div>
+        </div>
+      </section>
+
+      <!-- おすすめトピックセクション（枠のみ・後で差し替え可能） -->
+      <section class="section recommended-section" id="section-recommended" aria-labelledby="heading-recommended">
+        <h2 class="section-title" id="heading-recommended">おすすめトピック</h2>
+        <div class="recommended-list" id="recommended-container">
+          <div class="skeleton-list" id="recommended-skeleton" aria-hidden="false">
+            <div class="skeleton-item"></div>
+            <div class="skeleton-item"></div>
+          </div>
+          <div class="recommended-items" id="recommended-items" hidden></div>
+        </div>
+      </section>
+
+      <!-- メインフィード -->
+      <section class="section feed-section" id="section-feed" aria-labelledby="heading-feed">
+        <h2 class="section-title visually-hidden" id="heading-feed">フィード</h2>
+        <div class="feed-list" id="feed-container">
+          <div class="skeleton-list feed-skeleton" id="feed-skeleton" aria-hidden="false">
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+          </div>
+          <div class="feed-items" id="feed-items" hidden></div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-inner">
+        <p class="sidebar-label">ピックアップ</p>
+        <ul class="sidebar-links">
+          <li><a href="/roadmap.html">開発ロードマップ</a></li>
+          <li><a href="./games/baba-nuki/">ババ抜き（準備中）</a></li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <script src="app.js" defer></script>
 </body>
 </html>

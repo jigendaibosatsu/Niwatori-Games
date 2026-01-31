@@ -1,0 +1,70 @@
+{
+  "_schema": "items[]: id, type('game'|'post'), title, thumbnail?, category?, time?, badge?, url?, score?, trendingScore?, recommendedScore?",
+  "items": [
+    {
+      "id": "1",
+      "type": "game",
+      "title": "ババ抜き（準備中）",
+      "thumbnail": null,
+      "category": "ゲーム",
+      "time": "1時間前",
+      "badge": "NEW",
+      "url": "./games/baba-nuki/",
+      "score": 100,
+      "trendingScore": 90,
+      "recommendedScore": 85
+    },
+    {
+      "id": "2",
+      "type": "post",
+      "title": "開発ロードマップ公開",
+      "thumbnail": null,
+      "category": "記事",
+      "time": "2時間前",
+      "badge": null,
+      "url": "/roadmap.html",
+      "score": 90,
+      "trendingScore": 70,
+      "recommendedScore": 80
+    },
+    {
+      "id": "3",
+      "type": "post",
+      "title": "サイトオープンのお知らせ",
+      "thumbnail": null,
+      "category": "お知らせ",
+      "time": "1日前",
+      "badge": null,
+      "url": null,
+      "score": 80,
+      "trendingScore": 50,
+      "recommendedScore": 60
+    },
+    {
+      "id": "4",
+      "type": "game",
+      "title": "次のゲーム企画中",
+      "thumbnail": null,
+      "category": "ゲーム",
+      "time": "3日前",
+      "badge": "準備中",
+      "url": null,
+      "score": 70,
+      "trendingScore": 40,
+      "recommendedScore": 50
+    },
+    {
+      "id": "5",
+      "type": "post",
+      "title": "趣味：音楽制作",
+      "thumbnail": null,
+      "category": "趣味",
+      "time": "1週間前",
+      "badge": null,
+      "url": null,
+      "score": 60,
+      "trendingScore": 30,
+      "recommendedScore": 40
+    }
+  ]
+}
